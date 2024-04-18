@@ -13,7 +13,7 @@ const AddTask: FC<AddTodoProps> = ({ addTask, show, setShow }) => {
 
   const addTodos = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (title.length == 0 && description.length == 0) {
+    if (title.length == 0 || description.length == 0) {
       setError(true);
     } else {
       setError(false);
